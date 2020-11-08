@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="true" name="HandheldFriendly">
+    <meta content="width" name="MobileOptimazed">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Доходность инвестиций</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+</head>
+<body>
+    <section>
+        <div class="container-fluid text-center">
+            <h1>Доходность инвестиций</h1>
+            <h5>Калькулятор позволяет определить доходность инвестиционного портфеля, с учетом пополнений и выводов со счета.</h5>
+        </div>
+    </section>
+
+    <div class="container-fluid mt-4">
+        <form>
+            <div class="row">
+                <div class="col-4 col-md-3 col-xl-2 d-flex flex-column justify-content-between">
+                    <label for="date0" class="form-label">Дата</label>
+                    <input type="date" value="" class="form-control" id="date0" required>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-between">
+                    <label for="add0" class="form-label">Сумма первоначальных инвестиций</label>
+                    <input type="number" value="" class="form-control" id="add0" placeholder="ввести сумму" required>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-4 col-md-3 col-xl-2">
+                    <p>Дата</p>
+                </div>
+                <div class="col-4">
+                    <p>Сумма пополнения</p>
+                </div>
+                <div class="col-4">
+                    <p>Сумма вывода</p>
+                </div>
+            </div>
+            <div id="operationsRow">
+                <div class="row">
+                    <div class="col-4 col-md-3 col-xl-2">
+                        <input type="date" value="" class="form-control" id="date1">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" value="" class="form-control" id="add1" placeholder="ввести сумму">
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" id="out1" placeholder="ввести сумму">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <button type="button" class="btn btn-secondary" id="addButton">Добавить операцию</button>
+                <button type="button" class="btn btn-secondary ml-3" id="delButton">Удалить операцию</button>
+            </div>
+           
+            <div class="row mt-4">
+                <div class="col-4 col-md-3 col-xl-2 d-flex flex-column justify-content-between">
+                    <label for="dateEnd" class="form-label">Дата</label>
+                    <input type="date" value="" class="form-control" id="dateEnd">
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-between">
+                    <label for="sumEnd" class="form-label">Итоговая оценка</label>
+                    <input type="number" value="" class="form-control" id="sumEnd" placeholder="ввести сумму">
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div id="resultRow" class="col">
+                    <button id="startCalc" type="button" class="btn btn-primary">Рассчитать доходность</button>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+    <footer class="container-fluid mt-5 text-center">
+        <p>Вопросы и пожелания по работе калькулятора можно отправлять на почту: investmargin100@gmail.com</p>
+    </footer>
+   
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
