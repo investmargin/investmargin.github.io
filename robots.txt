@@ -1,2 +1,3 @@
 User-Agent: *
 Allow: /
+Sitemap: https://investmargin.github.io/sitemap.xml
