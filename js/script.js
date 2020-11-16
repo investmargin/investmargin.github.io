@@ -226,7 +226,7 @@ function showResult() {
     let yieldRound = Math.floor(yield* 100) / 100;
 
     resultRow.insertAdjacentHTML('beforeend',
-    `<strong id="showResult" class="ml-3">Доходность годовых: ${yieldRound}%</strong>
+    `<strong id="showResult" class="d-block mt-2 d-sm-inline ml-sm-3 mt-sm-0">Доходность годовых: ${yieldRound}%</strong>
     `);  
 
 }
