@@ -20,7 +20,7 @@
     <header>
         <div class="container-fluid">
             <h1 class="text-center">Доходность инвестиций</h1>
-            <h5>Калькулятор позволяет определить доходность инвестиционного портфеля, с учетом пополнений и выводов со счета.</h5>
+            <h5>Калькулятор позволяет определить доходность всего инвестиционного портфеля, с учетом пополнений и выводов со счета, а также по отдельным сделкам с ценными бумагами</h5>
         </div>
     </header>
 
@@ -90,7 +90,7 @@
             </div>
         </section>
 
-        <!-- example -->
+        <!-- example portfolio -->
         <section>
             <div class="container-fluid text-center mt-5">
                 <h5>Пример расчета доходности портфеля инвестиций</h5>
@@ -98,7 +98,7 @@
 
             <div class="container-fluid mt-3">
                 <p>
-                    Допустим на 1 января 2020 года на брокерском счету находятся ценные бумаги и деньги на общую сумму 100 000 руб. Вносим данные в первую строчку.
+                    Допустим, на 1 января 2020 года на брокерском счету находятся ценные бумаги и деньги на общую сумму 100 000 руб. Вносим данные в первую строчку.
                 </p>
                 <div class="row">
                     <div class="col-4 col-md-3 col-xl-2 d-flex flex-column justify-content-between">
@@ -169,10 +169,80 @@
             </div>
 
         </section>
+        
+        <!-- example stocks -->
+        <section>
+            <div class="container-fluid text-center mt-5">
+                <h5>Пример расчета доходности акций</h5>
+            </div>
+
+            <div class="container-fluid mt-3">
+                <p>
+                    Например, 6 августа 2020 года купили 1 акцию за 938,46 руб. Вносим данные в первую строчку.
+                </p>
+                <div class="row">
+                    <div class="col-4 col-md-3 col-xl-2 d-flex flex-column justify-content-between">
+                        <label for="ExampleDateStosks" class="form-label">Дата</label>
+                        <input type="" value="06.08.2020" class="form-control" id="ExampleDateStosks" disabled>
+                    </div>
+                    <div class="col-4 d-flex flex-column justify-content-between">
+                        <label for="ExampleAdd0Stocks" class="form-label">Первоначальные вложения</label>
+                        <input type="number" value="938.46" class="form-control" id="ExampleAdd0Stocks" disabled>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                    18 сентября получили дивиденды 13,44 руб. Добавляем информацию.
+                </p>
+                <div class="row">
+                    <div class="col-4 col-md-3 col-xl-2">
+                        <p>Дата</p>
+                    </div>
+                    <div class="col-4">
+                        <p>Сумма пополнения</p>
+                    </div>
+                    <div class="col-4">
+                        <p>Сумма вывода</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 col-md-3 col-xl-2">
+                        <input type="" value="18.09.2020" class="form-control" disabled>
+                    </div>
+                    <div class="col-4">
+                        <input type="number" class="form-control" disabled>
+                    </div>
+                    <div class="col-4">
+                        <input type="number" value="13.44" class="form-control" disabled>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                    30 октября 2020 года продали эту акцию за 1 063,87 руб.
+                </p>
+                <div class="row">
+                    <div class="col-4 col-md-3 col-xl-2 d-flex flex-column justify-content-between">
+                        <label for="dateEndExampleStocks" class="form-label">Дата</label>
+                        <input type="" value="30.10.2020" class="form-control" id="dateEndExampleStocks" disabled>
+                    </div>
+                    <div class="col-4 d-flex flex-column justify-content-between">
+                        <label for="sumEndExampleStocks" class="form-label">Итоговая оценка</label>
+                        <input type="number" value="1063.87" class="form-control" id="sumEndExampleStocks" disabled>
+                    </div>
+                </div>
+
+                <p class="mt-3">
+                    Получаем результат. Итого доходность сделки по акции составила:
+                </p>
+                <p>Доходность годовых: 63.98%</p>
+            </div>
+
+        </section>
+
     </main>
 
-    <footer class="container-fluid mt-5 text-center">
-        <p>Вопросы и пожелания по работе калькулятора можно отправлять на почту: investmargin100@gmail.com</p>
+    <footer class="container-fluid mt-5 mb-3 text-center">
+        <h6>Вопросы и пожелания по работе калькулятора можно отправлять на почту: investmargin100@gmail.com</h6>
     </footer>
    
     <script src="js/bootstrap.min.js"></script>
