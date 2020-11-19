@@ -151,8 +151,6 @@ function yieldCalc () {
     sumWeighted = sumMultip / diffDaysEnd;
     yield = (sumDelta / sumWeighted) * (daysYear / diffDaysEnd) * 100;
        
-    
-    
     // console.log("Первоначальная сумма:", sumBegin);
     // console.log("Сумма всех вводов средств:", sumAdd);
     // console.log("Сумма всех выводов средств:", sumOut);
@@ -217,6 +215,7 @@ delButton.addEventListener("click", delOperation);
 // Вывод результата на страницу
 
 function showResult() {
+    
     let showResult = document.getElementById('showResult');
     let resultRow = document.getElementById('resultRow');
 
@@ -225,9 +224,16 @@ function showResult() {
     }
     let yieldRound = Math.floor(yield* 100) / 100;
 
-    resultRow.insertAdjacentHTML('beforeend',
-    `<strong id="showResult" class="d-block mt-2 d-sm-inline ml-sm-3 mt-sm-0">Доходность годовых: ${yieldRound}%</strong>
-    `);  
+    if (Number.isNaN(yieldRound)) {
+        resultRow.insertAdjacentHTML('beforeend',
+        `<strong id="showResult" class="d-block mt-2 d-sm-inline ml-sm-3 mt-sm-0 font-italic">Заполните данные либо удалите пустые операции</strong>
+        `);  
+
+    } else {
+        resultRow.insertAdjacentHTML('beforeend',
+        `<strong id="showResult" class="d-block mt-2 d-sm-inline ml-sm-3 mt-sm-0">Доходность годовых: ${yieldRound}%</strong>
+        `);  
+    };
 
 }
 
